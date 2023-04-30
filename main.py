@@ -5,7 +5,7 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm
 
 # imported StringField class from wtforms module
-from wtforms import StringField, PasswordField
+from wtforms import StringField, PasswordField, SubmitField
 
 
 # created an instance of the Flask class and stored it in a variable called app
@@ -16,8 +16,9 @@ app.secret_key = 'dfvwejnilo3442-hjguuiuygl32r23!@#'
 
 """class to create a form with a username and password field"""
 class Login_Form(FlaskForm):
-    email = StringField('Email')
-    password = PasswordField('Password')
+    email = StringField(label='Email')
+    password = PasswordField(label='Password')
+    submit = SubmitField(label='Log In')
 
 # created a route decorator to tell Flask what URL should trigger our function
 @app.route("/")
