@@ -10,8 +10,12 @@ from wtforms import StringField, PasswordField, SubmitField
 # imported DataRequired class from wtforms.validators module
 from wtforms.validators import DataRequired, Email, Length
 
-# created an instance of the Flask class and stored it in a variable called app
+# imported Bootstrap class 
+from flask_bootstrap import Bootstrap
+
+# created an instance of the Flask class and stored it in a variable called app and created an instance of the Bootstrap class
 app = Flask(__name__)
+Bootstrap(app)
 
 # variable to store the secret key
 app.secret_key = 'dfvwejnilo3442-hjguuiuygl32r23!@#'
